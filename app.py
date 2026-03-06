@@ -225,7 +225,10 @@ fig.update_layout(
 )
 
 st.markdown('<div style="background-color: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #E2E8F0;">', unsafe_allow_html=True)
-st.plotly_chart(fig, use_container_width=True)
+
+# ---> AQUÍ ESTÁ EL CAMBIO PARA HACERLO ESTÁTICO <---
+st.plotly_chart(fig, use_container_width=True, config={'staticPlot': True})
+
 st.markdown('</div>', unsafe_allow_html=True)
 
 st.markdown("<br><br><center><p style='color: #94A3B8;'>Dashboard interactivo generado automáticamente a partir de evaluaciones psicométricas.</p></center>", unsafe_allow_html=True)
